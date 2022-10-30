@@ -6,8 +6,8 @@ function init() {
   // TODO
   var horn = document.getElementsByName("horn");
   var hornSelected = horn.options[horn.selectedIndex].value;
-  if(hornSelected == 'select'){
-    alert("Please select a card type");
+  if(hornSelected == 'air-horn'){
+    alert("air-horn selected");
   }
 }
 
