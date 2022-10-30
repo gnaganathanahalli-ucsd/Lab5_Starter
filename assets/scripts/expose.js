@@ -4,9 +4,9 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // TODO
-  var air_opt = document.getElementById("air-horn");
-  var car_opt = document.getElementById("car-horn");
-  var party_opt = document.getElementById("party-horn");
+  var air_opt = document.getElementById("horn-select").value("air-horn");
+  var car_opt = document.getElementById("horn-select").value("car-horn");
+  var party_opt = document.getElementById("horn-select").value("party-horn");
   var sound_img = document.querySelector('img[alt="No image selected]');
 }
 
