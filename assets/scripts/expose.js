@@ -8,16 +8,19 @@ function init() {
   var car_opt = document.getElementById("horn-select").value("car-horn");
   var party_opt = document.getElementById("horn-select").value("party-horn");
   var sound_img = document.querySelector('img[alt="No image selected]');
+  // switches image and sound to air horn
+  air_opt.addEventListener("input", function() {
+    if (air_opt.checked) {
+        sound_img.src = "assets\images\air-horn.svg";
+    }
+  });
+
+
 }
 
 
 
-// switches image and sound to air horn
-air_opt.addEventListener("input", function() {
-  if (air_opt.checked) {
-      sound_img.src = "assets\images\air-horn.svg";
-  }
-});
+
 
 // switches image and sound to car horn
 car_opt.addEventListener("input", function() {
