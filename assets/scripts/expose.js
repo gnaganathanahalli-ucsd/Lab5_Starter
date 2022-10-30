@@ -1,39 +1,44 @@
 // expose.js
 
-//var hornSelectOption = document.getElementById("horn-select");
-
-
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // TODO
-  const hornSelectOption = document.querySelector('.horn')
 }
 
+var air_opt = document.getElementById("air-horn");
+var car_opt = document.getElementById("car-horn");
+var party_opt = document.getElementById("party-horn");
+var aud = document.getElementsByClassName("hidden");
 
-hornSelectOption.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
-  result.textContent = `You like ${event.target.value}`;
+const buttons = document.querySelectorAll("button");
+
+
+// switches image and sound to air horn
+air_opt.addEventListener("input", function() {
+  if (air_opt.checked) {
+      aud.src = "assets\audio\air-horn.mp3";
+  }
 });
 
-/*
-function playSoundButton(button){
-  // when button is pressed, play correct sound
-  // if hornSelect is party-horn, have confettii go off as well
-};
-
-
-// Volume Level Icons
-function volumeAdjustment(volumeLevel){
-  if(volumeLevel == 0){
-    // volume-level-0 image
-  }else if(volumeLevel < 33){
-    // volume-level-1 image
-  }else if(volumeLevel < 67){
-    // volume-level-2 image
-  }else{
-    // volume-level-3 image
+// switches image and sound to car horn
+car_opt.addEventListener("input", function() {
+  if (car_opt.checked) {
+      aud.src = "assets\audio\car-horn.mp3";
   }
+});
 
-};
-*/
+// switches image and sound to party horn
+party_opt.addEventListener("input", function() {
+  if (party_opt.checked) {
+      aud.src = "assets\audio\party-horn.mp3";
+  }
+});
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    aud.play();
+  });
+});
+
+
