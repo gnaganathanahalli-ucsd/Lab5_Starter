@@ -2,14 +2,22 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
+
 function init() {
   // TODO
   var horn = document.getElementsByName("horn");
   var hornSelected = horn.options[horn.selectedIndex].value;
+  function hornChosen(hornSelected);
+}
+
+function hornChosen(hornSelected){
   if(hornSelected == 'air-horn'){
+    console.log("hello people");
     alert("air-horn selected");
   }
 }
+
+
 
 
 
